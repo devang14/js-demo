@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+            <script>
+
+                // not allowed same variable name
+              //   let test = 5;
+                let test =10;
+
+                //allowed reassigned variable
+
+                let test2 = 20;
+                test2 = 30;
+                console.log(test2);
+
+                //block case1:-
+
+                let test3 = 25;
+                {
+                   let test3 = 20;
+                    console.log(test3);
+                }
+                    console.log(test3);
+                //case2:-
+                {
+                    test4 = 15;
+                     console.log(test4);
+                }
+                    
+
+            
+            </script>
+</body>
+</html>

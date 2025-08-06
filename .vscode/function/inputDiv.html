@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<input type="number" value="0" id="input1" onchange="a(this.value)">
+<input type="number" value="0" id="input2" onchange="b(this.value)">
+<button onclick="inputDivision()"> calculate Division </button>
+
+<body>
+        <script>
+                let num1 = 0;
+                let num2 = 0;
+
+                function a(value)
+                {
+                    console.log("first input value:", typeof value, value);
+                    num1 = Number(value);
+                    alert("first input value: " + value);
+                }
+
+                function b(value)
+                {
+                    console.log("second input value:", typeof value, value);
+                    num2 = Number(value);
+                    alert("second input value: " + value);
+                }
+
+                function inputDivision()
+                { 
+                    const division = num1 / num2;
+                    alert("division of input: " + division);
+                    console.log("Final output: ", division);
+                }
+        </script>
+</body>
+</html>

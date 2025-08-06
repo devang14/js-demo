@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<input type="number" value="0" id="input1" onchange="a(this.value)">
+<input type="number" value="0" id="input2" onchange="b(this.value)">
+<button onclick = "inputsubstraction()"> calculate subtraction </button>
+<body>
+        <script>
+                let x ;
+                let y ;
+
+                function a(value)
+                {
+                    console.log("first input change value:", typeof value, value);
+                    x = Number(value);
+                    alert("first input value:" + value);
+                }
+
+                function b(value)
+                {
+                    console.log("second input change value:", typeof value, value);
+                    y = Number(value);
+                    alert("Second input value:" + value);
+                }
+                function inputsubstraction()
+                {
+                    const substraction = x - y;
+                    alert("subtraction of input:  " + substraction);
+                    console.log("Final output: ", substraction);
+                }
+
+                
+        </script>
+</body>
+</html>

@@ -6,23 +6,24 @@
     <title>Document</title>
 </head>
 
-<input type="number" value="0" id="input1" onchange="a(this.value)">
-<input type="number" value="0" id="input2" onchange="b(this.value)">
+<input type="number" value="" id="input1" onchange="a(this.value)"> 
+<!-- can't declare variable name inside value -->
+<input type="number" value="" id="input2" onchange="b(this.value)">
 
 <button onclick="inputsum()"> calculate sum </button>
 <body>
         <script>
-                    let firstInputValue = 0
-                    let secondInputValue = 0
+                    let firstInputValue = 0 ;  // variable name and variable value
+                    let secondInputValue = 0;
 
-                    function a(value)
+                    function a(value) //a is function name, value is parameter
                     {
                         console.log("first input change value:", typeof value, value);
                         firstInputValue = Number(value)
                         alert("first input value:" + value)
                     }
 
-                    function b(value)
+                    function b(value) //parameter name can be same as previous function.
                     {
                          console.log("first input change value:", typeof value, value);
                          secondInputValue = Number(value)
@@ -32,8 +33,8 @@
                     function inputsum()
                     {
                         const sum = firstInputValue + secondInputValue ;
-                        alert("sum of input:" + sum);
-                        console.log("Final output:", sum);
+                        alert("sum of input: " + sum);
+                        console.log("Final output: ", sum);
                     }
         </script>
 </body>

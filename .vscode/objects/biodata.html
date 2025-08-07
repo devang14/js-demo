@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .age,.state,.city,.firstname,.lastname,.phone
+        {
+            color: red;
+            font-size: 13px;
+            background-color: yellow;
+            width: 105px;
+        }
+
+    </style>
+</head>
+
+<button  class="firstname" onclick="firstname()"> First Name </button> <br>
+<button class="lastname" onclick="lastname()"> Last Name </button>   <br>
+<button class="age" onclick="age()"> Age </button> <br>
+<button class="state" onclick="state()"> State </button> <br>
+<button class="city" onclick="city()"> City </button>    <br>
+<button class="phone" onclick="phone()"> Phone Number </button> 
+
+
+<body>
+        <p id="fname"></p>
+        <p id="lname"></p>
+        <p id="age"></p>
+        <p id="state"></p>  
+        <p id="city"></p>
+        <p id="phone"></p>
+    <script>
+                const first = {};
+                
+                function firstname() 
+                {
+                first.firstname  = "Devang"
+                console.log("First Name:", first.firstname);
+                document.getElementById("fname").innerText = "First Name: " + first.firstname;     
+                // document.getElementById("fname").innerText = first.firstname = "Devang";
+            }
+
+                function lastname() 
+                {   
+                first.lastname = "raj";
+                console.log("Last Name:", first.lastname);
+                document.getElementById("lname").innerText = "Last Name: " + first.lastname; 
+                // document.getElementById("lname").innerText = first.lastname = "raj";    
+                }
+                function age() 
+                {   
+                first.age = 30;
+                console.log("Age:", first.age);  
+                   document.getElementById("age").innerText = "Age: " + first.age;
+                // document.getElementById("age").innerText = first.age = 30;
+                }   
+
+                function state() 
+                {   
+                    first.state = "California";
+                    console.log("State:", first.state); 
+                    document.getElementById("state").innerText = "State: " + first.state;
+               //    document.getElementById("state").innerText = first.state = "California";
+                }
+                function city()
+                {
+                    first.city ="Los Angeles";
+                    console.log("city:", first.city);
+                    document.getElementById("city").innerText = "City: " + first.city
+                 //   document.getElementById("city").innerText = first.city = "Los Angeles";
+                }
+
+                function phone() 
+                {   
+                    first.phone = "+1 9998604421";
+                    console.log("Phone Number:", first.phone); 
+                    document.getElementById("phone").innerText = "Phone Number: " + first.phone;
+                // document.getElementById("phone").innerText = first.phone = "+91 9998604421";
+                }
+    </script>
+</body>
+</html>

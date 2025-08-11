@@ -32,8 +32,8 @@
             }
 
             function remofirstvalue() {
-                const remove = fruits.shift();
-                if (newfruits[0] === remove) {
+                const removed = fruits.shift();
+                if (newfruits[0] === removed) {
                     newfruits.shift();}
                  document.getElementById("fruits").innerText = "Fruits: " + newfruits.join(", ");
                 console.log("After removing first value:", fruits);

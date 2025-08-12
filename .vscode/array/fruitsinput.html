@@ -6,23 +6,29 @@
     <title>Document</title>
 </head>
 
-<input type="string" value="" id="input1" onchange="a(this.value)" >
-<input type="string" value="" id="input2" onchange="b(this.value)">
+<input type="string" value="" id="input1" placeholder="Enter fruit name">
 <button onclick="addvalue()">Add Value</button>
 
 
 <body>
-    <p id="fruits"></p>
-        <string>
-          let fruits = [];
+        <p id="fruits"></p>
+        <script>
 
-          function addvalue()
-          {
-            const input1 = document.getElementById("input1").value;
-            const input2 = document.getElementById("input2").value;
-          }
+            const fruits = [];
+            console.log(fruits);
 
-        </string>
+            function addvalue() {
+                const newValue = document.getElementById("input1").value;
+                if (newValue) {
+                    fruits.push(newValue);
+                    document.getElementById("fruits").innerText = "Fruits: " + fruits.join(", ");
+                    console.log("After adding value:", fruits);
+                } else {
+                    alert("Please enter a value to add.");
+                }
+            }
+
+        </script>
 
 </body>
 </html>

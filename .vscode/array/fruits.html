@@ -10,65 +10,48 @@
 <button onclick="remofirstvalue()">Newly Remove Last Value</button>
 <button onclick="addlastvalue()">Last Added First Value</button>
 <button onclick="remolastvalue()">Last removed Last Value</button>
-<button onclick="showfruitslength()">Show Fruits Length</button>
-<button onclick="showfruitsindex()">Show Fruits Index</button>
 
 <body>
 
-    <p id="fruits"></p>
+    <p id="firstvalueadd"></p>
+    <p id="removefirstvalue"></p>
+    <p id="lastvalueadd"></p>
+    <p id="removelastvalue"></p>
+    
         <script>
             const fruits = ["Apple", "Banana", "chiku", "grapes", "orange"]
             console.log(fruits);
 
             function addfirstvalue() {
                 fruits.unshift("Mango");
-                document.getElementById("fruits").innerText = "Fruits: " + fruits.join(", ");
-                console.log("After adding first value:", fruits);
+                document.getElementById("firstvalueadd").innerText = "fruits: " + fruits.join(", ");
+                console.log("After adding first value:", firstvalueadd);
             }
 
             function remofirstvalue() {
                 if (fruits.length > 0) {
-                     const removed = fruits.shift();
+                     const remove = fruits.shift();
                 }
-                document.getElementById("fruits").innerText = "Fruits: " + fruits.join(", ");
-                console.log("After removing first value:", fruits);
-                console.log("Removed first value:", removed);
+                document.getElementById("removefirstvalue").innerText = "Fruits: " + fruits.join(", ");
+                console.log("After removing first value:", removefirstvalue);
+               
             }
 
             function addlastvalue() {
                 fruits.push("Pineapple", "Watermelon");
-                document.getElementById("fruits").innerText = "Fruits: " + fruits.join(", ");
-                console.log("After adding last value:", fruits);
+                document.getElementById("lastvalueadd").innerText = "Fruits: " + fruits.join(", ");
+                console.log("After adding last value:", lastvalueadd);
             }
 
-            function remolastvalue() {
-               if (fruits.length > 0) {
-                     const removed = fruits.shift();
-                }
-                else{
-                    console.log("No fruits to remove.");
-                    document.getElementById("fruits").innerText = "No fruits to remove.";
-                    
-                }
-                document.getElementById("fruits").innerText = "Fruits: " + fruits.join(", ");
-                console.log("After removing last value:", fruits);
-                console.log("Removed last value:", removed);
+             function remolastvalue() {
+            if (fruits.length > 0) {
+                fruits.pop();
             }
+            document.getElementById("removelastvalue").innerText = "Fruits: " + fruits.join(", ");
+            console.log("After removing last value:", fruits);
+        }
 
-            function showfruitslength() {
-                console.log("Fruits Length:", fruits.length);
-                document.getElementById("fruits").innerText = "Fruits Length: " + fruits.length;
-            }
-
-            function showfruitsindex() {
-                console.log("Fruits and their indexes:");
-                let indexdisplay = "Fruits Index: ";
-                fruits.forEach(function(fruit, index) {
-                    console.log("Index " + index + ": " + fruit);
-                    indexDisplay += "[" + index + ": " + fruit + "] ";
-                });
-                document.getElementById("fruits").innerText = indexDisplay;
-            }
+           
         </script>
 </body>
 </html>

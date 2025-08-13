@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <p id = "sumof"></p>
         <script>
             let sum = 0;
             let i=1;
@@ -13,9 +14,12 @@
         {
             sum += i;
             i++;
-           
+          //  console.log("Current sum is: " + i);
+          //  console.log("Current sum is: " + sum);
+
         }
          console.log("Current sum is: " + sum);
+         document.getElementById("sumof").innerHTML = "Sum of 1 to 100 is: " + sum;
 
         </script>
 </body>

@@ -7,6 +7,7 @@
 </head>
 <body>
    
+    <p id="factorialvalue"></p>
        <script>
 
         let n = 5;
@@ -16,8 +17,8 @@
                n *= (i - 1);
            }
               
-              console.log("Factorial: " + n);
-           
+              console.log("Factorial value of 5: " + n);
+                document.getElementById("factorialvalue").innerHTML = "Factorial value of 5: " + n;
         }
        </script>
 </body>

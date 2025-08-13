@@ -24,31 +24,32 @@
 
             function addfirstvalue() {
                 fruits.unshift("Mango");
-                document.getElementById("firstvalueadd").innerText = "fruits: " + fruits.join(", ");
+                document.getElementById("firstvalueadd").innerText = "fruits: " + fruits.unshift();
                 console.log("After adding first value:", firstvalueadd);
             }
 
             function remofirstvalue() {
-                if (fruits.length > 0) {
+              
                      const remove = fruits.shift();
-                }
-                document.getElementById("removefirstvalue").innerText = "Fruits: " + fruits.join(", ");
-                console.log("After removing first value:", removefirstvalue);
+                      document.getElementById("removefirstvalue").innerText = "Fruits: " + remove();
+                     console.log("After removing first value:", removefirstvalue);
                
-            }
+                }
+            
 
             function addlastvalue() {
                 fruits.push("Pineapple", "Watermelon");
-                document.getElementById("lastvalueadd").innerText = "Fruits: " + fruits.join(", ");
+                document.getElementById("lastvalueadd").innerText = "Fruits: " + fruits.push();
                 console.log("After adding last value:", lastvalueadd);
             }
 
              function remolastvalue() {
-            if (fruits.length > 0) {
-                fruits.pop();
+           
+                 if (fruits.length - 1 >= 0) {
+                let removelastvalue = fruits.pop();
+                document.getElementById("removelastvalue").innerText = "Fruits: " + removelastvalue;
+                console.log("After removing last value:", removelastvalue);
             }
-            document.getElementById("removelastvalue").innerText = "Fruits: " + fruits.join(", ");
-            console.log("After removing last value:", fruits);
         }
 
            

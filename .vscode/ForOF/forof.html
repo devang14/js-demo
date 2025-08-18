@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            
+            let person = [{ fname: "rahul", lname: "kl", age: 30, city:"Banglore", country: "ïndia"}, 
+            { fname: "devang", lname: "raj", age: 26, city:"Mumbai", country: "India"}];
+            let car = [{ name: "toyota", model:2023, color: "red"}, { name: "mercedes-benz", model:2024, color: "black"}, { name: "audi", model:2025, color: "white"}];        
+            
+            let htmltextol = "<ol>";
+
+            for (let x in persons)
+            {
+                htmltextol += `<li>${x} :- ${persons[x]}</li> \n`;
+                console.log("check the console for output inside:", htmltextol);
+            }
+            htmltextol += "</ol>";
+            document.getElementById("pdetails").innerHTML = htmltextol;
+        </script>
+
+</body>
+</html>

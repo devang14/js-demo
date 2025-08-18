@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id ="demo"> </p>
+    <p id ="demo1"> </p>
+        <script>
+
+            // therea are two types of declair objects 1. person.fname 2. person["fname"]
+            // for in loop is used to iterate over the properties of an object
+
+            let person = { fname: "devang", lname: "raj", age: 26};
+            let text = "";
+            let htmlWithText = "<ul>";
+            for(let x in person)
+        {
+           // text += x + ":-" + person[x] + "<br>";
+          //  text += x + ":- " + person[x] + "\n";
+
+            text += `${x} :- ${person[x]} \n`;
+            htmlWithText += `<li>${x} :- ${person[x]}</li>`;
+           // console.log(person[x]); // always accessed by [] square brackets
+           console.log("check the console for output inside:", htmlWithText)
+        }
+            htmlWithText += "</ul>";
+            console.log("check the console for output", htmlWithText);
+            document.getElementById("demo1").innerHTML = htmlWithText;
+          //  document.getElementById("demo").innerHTML = text;
+              document.getElementById("demo").innerText = text;
+
+
+   /*       for (let x in person) {
+            console.log(person[x]);      
+            }*/
+        </script>
+</body>
+</html>

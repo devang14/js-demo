@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+        
+        <script>
+                const cars = [{name: "Audi", color: "red", model: 2025,},
+                {name: "BMW", color: "blue", model: 2024},
+                {name: "Mercedes", color: "black", model: 2023}
+                ]; 
+            let carsdata = "<ul>";
+            for(let x of cars)
+        {
+            console.log("check the console for output inside:", x);
+            for(let y in x)
+        {
+            console.log("check the console for output outside:", y, ":-", x[y]);
+              carsdata += `<li> ${y} :- ${x[y]}</li>`;
+        }
+        }
+        carsdata += "</ul>";
+        document.getElementById("demo").innerHTML = carsdata;
+
+        </script>
+</body>
+</html>

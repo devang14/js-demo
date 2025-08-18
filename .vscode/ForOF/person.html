@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+        <script>
+
+              const customerlist = [{ fname: "virat", lname: "kohli", age: 36, city: "Delhi", country: "India"},
+                 { fname: "rahul", lname: "kl", age: 30, city:"Banglore"}];
+
+                 let customer = "<ul>";
+                 for(let x of customerlist)
+                 {
+                    for(let y in x)
+                    {
+                        customer += `<li> ${y} :- ${x[y]} </li>`;
+                    }
+                     //  customer += `<li> FName: ${x.fname}, LName: ${x.lname}, Age: ${x.age}, City: ${x.city}, country: ${x.country} </li>`;
+                      //  customer += `<li> ${customerlist[x].fname}, ${customerlist[x].lname}, ${customerlist[x].age}, ${customerlist[x].city}, ${customerlist[x].country} </li>`;
+                 }
+                   customer += "</ul>";
+                   document.getElementById("demo").innerHTML = customer;
+        </script>
+</body>
+</html>

@@ -13,15 +13,15 @@
         <script>
 
             // for in loop is used for objects
-                 let persons = { fname: "virat", lname: "kohli", age: 36, city: "Delhi", country: "India"};
-                let person = { fname: "rahul", lname: "kl", age: 30, city:"Banglore", country: "ïndia"};
-                let car = { name: "toyota", model:2023, color: "red"};        
+                 let persons = [{ fname: "virat", lname: "kohli", age: 36, city: "Delhi", country: "India"},
+                 { fname: "rahul", lname: "kl", age: 30, city:"Banglore", country: "ïndia"}];
+            //    let car = { name: "toyota", model:2023, color: "red"};        
                 
                 let htmltextol = "<ol>";
 
                 for (let x in persons)
                 {
-                    htmltextol += `<li>${x} :- ${persons[x]}</li> \n`;
+                    htmltextol += `<li> fname: ${persons[x].fname}, lname: ${persons[x].lname} </li> \n`;
                     console.log("check the console for output inside:", htmltextol);
                 }
                     htmltextol += "</ol>";
@@ -29,7 +29,7 @@
             
 
 
-              let htmltext_p = "<ol>";
+         /*     let htmltext_p = "<ol>";
                     for (let data in person)
                 {
                     htmltext_p += `<li> ${data} :- ${person[data]}  </li> \n`;
@@ -49,7 +49,7 @@
                 }
                 htmltext += "</ol>";
                 document.getElementById("carDetails").innerHTML = htmltext;
-        
+        */
         </script>
 </body>
 </html>

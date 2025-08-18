@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "details"></p>
+    <p id = "carDetails"></p>
+    <p id ="pdetails"> </p>
+        <script>
+                 let persons = { fname: "virat", lname: "kohli", age: 36, city: "Delhi", country: "India"};
+                let person = [{ fname: "rahul", lname: "kl", age: 30, city:"Banglore", country: "ïndia"}, 
+                { fname: "devang", lname: "raj", age: 26, city:"Mumbai", country: "India"}];
+                let car = [{ name: "toyota", model:2023, color: "red"}, { name: "mercedes-benz", model:2024, color: "black"}, { name: "audi", model:2025, color: "white"}];        
+                
+                let htmltextol = "<ol>";
+
+                for (let x in persons)
+                {
+                    htmltextol += `<li>${x} :- ${persons[x]}</li> \n`;
+                    console.log("check the console for output inside:", htmltextol);
+                }
+                    htmltextol += "</ol>";
+                    document.getElementById("pdetails").innerHTML = htmltextol;
+            
+
+
+                let htmltext_p = "<ol>";
+                    for (let data in person)
+                {
+                    htmltext_p += `<li> FirstName: ${person[data].fname}, LastName: ${person[data].lname} Age: ${person[data].age} </li> \n`;
+                    console.log("check the console for output inside:", htmltext_p);
+                }
+                htmltext_p += "</ol>";
+                document.getElementById("details").innerHTML = htmltext_p;
+
+              
+              
+               let htmltext = "<ol>";
+
+                for (let i in car)
+                {
+                    htmltext += `<li> Name: ${car[i].name}, Model: ${car[i].model}, Color: ${car[i].color}</li>`;
+                    console.log("check the console for output inside car:", htmltext);
+                }
+                htmltext += "</ol>";
+                document.getElementById("carDetails").innerHTML = htmltext;
+        
+        </script>
+</body>
+</html>

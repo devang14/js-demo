@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+   
+        <script>
+                  const fruits = [{ name: "Apple", color: "Red", price: 100},
+                 { name: "Banana", color: "Yellow", price: 50},
+                 { name: "Grapes", color: "Green", price: 80},
+                 { name: "Mango", color: "Yellow", price: 120},
+                 { name: "Orange", color: "Orange", price: 60}];  
+                 
+                let fruitList = "<ol>";
+                    for(let fruit of fruits)
+                    {
+                        for(let property in fruit)
+                        {
+                            console.log("check the console for output inside:", property, ":-", fruit[property]);
+                            fruitList += `<li>${property} :- ${fruit[property]}</li>`;
+                        }
+                    }
+                    fruitList += "</ol>";
+                    console.log("check the console for output outside:", fruitList);
+                    document.getElementById("demo").innerHTML = fruitList;
+        </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="button">Click Me</button>
+    <div id ="nameList"></div>
+    
+            <script>
+
+                const names = ["john", "sara","amit", "riya"];
+                  document.getElementById("button").onclick = function()
+                  {
+
+                let htmltext = "<ul>";
+
+                    names.forEach(function(name){
+                         
+                        htmltext += `<li>Name: ${name} </li>`;
+                        console.log("list of name:-",name);
+                        
+                    });
+                    htmltext += "</ul>";
+                   document.getElementById("nameList").innerHTML = htmltext;
+                };
+            </script>
+</body>
+</html>

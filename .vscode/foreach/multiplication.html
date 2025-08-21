@@ -12,11 +12,9 @@
         <script>
                 const numbers = [1,2,3,4,5,6,7,8,9,10];
                 
-                document.getElementById("num").onchange = function() 
-            
+              document.getElementById("btn").onclick = function()            
                     {
-                         let value = this.value;
-                      //   let value = document.getElementById("num").value;
+                        let value = document.getElementById("num").value;
                         let table ="";
                         numbers.forEach(function(number)
                         {
@@ -25,14 +23,7 @@
                     });
                          document.getElementById("num").innerHTML = table;
 
-
-                      document.getElementById("btn").onclick = function()
-                        {
-                                console.log(table);
-                        }
-                       
-
-                       
+  
                     };
         </script>
 </body>

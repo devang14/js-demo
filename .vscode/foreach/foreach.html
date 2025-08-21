@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="numberDetails"></p>
+
+    <script>
+
+            const numbers = [ 1,2,3,4,5];
+            let sum  = 0;
+          let htmltext = "<ul>";
+                          //   Using forEach method 1  
+                numbers.forEach(function(number,index,arr){
+                    
+                    console.log(number, index, arr);
+                    sum += number
+                    htmltext += `<li>value ${number} index ${index} array ${arr}</li>`;
+                });
+            htmltext += "</ul>";
+           document.getElementById("numberDetails").innerHTML =  sum + htmltext;
+        
+
+// Using arrow function method 2
+            function myfunction(value, index, array){
+                console.log(value, index, array);
+                sum += value;
+                htmltext += `<li>value ${value} index ${index} array ${array}</li>`;
+            }
+            numbers.forEach(myfunction);
+            document.getElementById("numberDetails").innerHTML = sum + htmltext + "</ul>";
+    </script>
+            
+</body>
+</html>

@@ -12,13 +12,13 @@
                     let  n = 5;
                     let str = "";
 
-                    for(i=1; i<=n; i--)
+                    for(let i=n; i >=1; i--)
                     {
-                        for(j=1; j<=i-1; j++)
+                        for(let j=1; j<=n-i; j++)
                     {
                         str += " ";
                     }
-                    for (k=1; k<= 2*i - 1; k++)
+                    for (let k=1; k<= 2 * i - 1; k++)
                     {
                         str += "*";
                     }

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <pre id ="square"></pre>
+        <script>
+                let n =6;
+                let str = "";
+
+                for(let i=1; i<=n; i++)
+                {
+                    for(j=1; j<=n; j++)
+                {
+                    str += "* ";
+                }
+                    str += "\n";
+                }
+                    document.getElementById("square").innerHTML = str;
+        </script>
+</body>
+</html>

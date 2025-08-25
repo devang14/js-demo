@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+            <script>
+                     const users = [{ id: 1, email: "raj@gmail.com"}, {id: 2, email: "anu@gmail.com"}, 
+                     {id: 3, email: "vikas@gmail.com"}];
+
+                     const user1 = users.find(function(data){
+                        return data.id === 2;
+                     })
+                     console.log(user1);
+
+                     const user2 = users.filter(function(identification){
+                        return identification.id !== 2;
+                     })
+                     console.log(user2);
+            </script>
+</body>
+</html>

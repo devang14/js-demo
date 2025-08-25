@@ -18,13 +18,14 @@
                     return avability.inStock === true;
 
                 })
-                console.log("availablestock:",availablestock)
+                console.log(availablestock)
 
                 const outofstock = products.find(function(product){
 
-                     return product.instock !== true;
+                     return product.inStock !== true;
+
                 });
-                console.log("out of stock:", outofstock);
+                console.log(outofstock);
         </script>
 </body>
 </html>

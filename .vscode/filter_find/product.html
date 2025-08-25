@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+                const products = [
+                    {id: 1, name: "laptop", inStock: true},
+                    {id: 2, name: "mobile", inStock: false},
+                    {od: 3, name: "Tablet", inStock: true}
+                ];
+
+                const availablestock = products.filter(function(avability){
+
+                    return avability.inStock === true;
+
+                })
+                console.log("availablestock:",availablestock)
+
+                const outofstock = products.find(function(product){
+
+                     return product.instock !== true;
+                });
+                console.log("out of stock:", outofstock);
+        </script>
+</body>
+</html>

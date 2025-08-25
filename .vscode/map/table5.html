@@ -14,11 +14,14 @@
                     {
                         let value = document.getElementById("num").value;
                         let table ="";
-                        numbers.forEach(function(number)
-                        {
-                           let tableOf = numbers.map(`${value} X ${number} = ${value*number}`);
-
-                         //    document.getElementById("table").innerHTML = tableOf;
+                         let tableOf = numbers.map(function 
+                         (`${value} X ${number} = ${value*number}`);
+                         console.log("table", tableOf)
+                        tableOf.forEach(function(number)
+                          {
+                          
+                             tavble += `number <br>`;
+                        
                     
                     });
                          document.getElementById("num").innerHTML = table;

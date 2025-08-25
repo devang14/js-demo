@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+                    const people = [
+                        {name: "Ravi", age: 12}, 
+                        {name: "Simran", age: 17}, 
+                         {name: "Ajay", age:25},
+                         {name: "Meena", age: 32}
+                    ];
+
+                    const adult = people.filter(function(data){
+                        return data.age >= 18;
+                    });
+                    console.log(adult);
+                    const teenager = people.find(function(teenage){
+                        return teenage.age <= 18;
+                    });
+                    console.log(teenager);
+        </script>
+</body>
+</html>

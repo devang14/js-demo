@@ -7,6 +7,7 @@
 </head>
 <body>
         <script>
+                
                     const ages = [10,18,25,35,40]
 
                     const Age = ages.findIndex(function(x){
@@ -15,6 +16,14 @@
 
                     })
                         console.log("Age index:", Age);
+
+                    const numbers = [3,4,5,6,7]
+
+                    const lessage = numbers.findIndex(function(minor){
+
+                        return minor > 18;
+                    })  
+                    console.log("if condition is not satisfied:", lessage);
         </script>
 </body>
 </html>

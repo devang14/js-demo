@@ -10,13 +10,14 @@
                 // check every array value, if the logics are failed for any one of array value,
                 //  then display false.
                 const ages = [23,30,16,33]
-                const Ages = [19,25,27,39]
+               
                 const x = ages.every(function(value){
+                    console.log(value);
                     return value > 18;
                 })
                 console.log("return:", x);
                 // all the Ages array value is adut and the logic is passed. so dispaly true.
-                
+                 const Ages = [19,25,27,39]
                 const y = Ages.every(function(adult){
                     return adult > 18;
                 })

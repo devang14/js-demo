@@ -7,7 +7,15 @@
 </head>
 <body>
         <script>
-            
+                    // Que: when check the first condition,pass the condition, display console with all array
+                    // but when add value last and pass the condition display only last array?
+                    const ages = [3,10,18,20,30,5,40]
+                    // check last condition which is correct or pass the condition
+                    const state = ages.findLast(function(lang,index){
+                        console.log(lang,index);
+                        return lang < 10;
+                    });
+                        console.log("correct value:", state);
         </script>
 </body>
 </html>

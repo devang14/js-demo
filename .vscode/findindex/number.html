@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+        <input type="number" id = "num" value = "" placeholder="Enter the Number"> 
+        <button onclick = "myfunction()"> click on </button>
+<body>
+        <p id="demo"></p>
+        <script>
+
+            const numbers = [4,12,16,20]
+
+            function myfunction()
+            {
+            const inputvalue = document.getElementById("num").value;
+
+            const numberfact = numbers.findIndex(function(x)
+            {
+                    return x > inputvalue;
+                
+            });
+                document.getElementById("demo").innerHTML = numberfact;
+        }
+        
+
+
+        </script>
+</body>
+</html>

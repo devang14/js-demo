@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+                    //              acc    
+                    const numbers = [175, 40, 25]
+                   //index           0     1   2   not given any inicial value then accumulator is takes first value of 0 index.
+                    const calculation = numbers.reduce(function(acc,current,index){
+                        console.log("check1", "accumulator:", acc ,"value:", current , "index", index )
+                       // return acc + current;
+                         return acc - current;
+                       // return acc * current;
+                    },0); // 0 is initial value
+                    console.log("calculation:", calculation);
+
+                    const fruits = ["apple","banana","orange","mango","apple","orane"]
+
+                    const listoffruits = fruits.reduce(function(acc,name,index){
+
+                        acc[name] = (acc[name] || 0) + 1;
+                        return acc;
+
+                    },{});
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+            <script>
+                    // find last index 
+                    const numbers = [3,10,22,28,33,6]
+
+                    const ages = numbers.findLastIndex(function(age,index){
+                        console.log("print age:",age , "index number:", index);
+                        return age > 18;
+                    });
+                    console.log("Age index:", ages, numbers);
+            </script>
+</body>
+</html>

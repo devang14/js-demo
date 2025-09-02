@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+            <script>
+                        let students = [
+                            {name: "Alice",age: 22},
+                            {name: "Bob", age: 19},
+                            {name: "charlie", age: 25},
+                            {name: "dev", age: 5}
+                        ]
+
+                        students.sort(function(a,b){
+
+                          //  return a.age - b.age;
+
+                            return a.name - b.name;
+
+                        });
+                     //   console.log("student age",students);
+                        console.log("student name:", students);
+
+                        let numbers = [10,2,8,1]
+
+                        numbers.sort(function(a,b){
+
+                            return b-a;
+                        });
+                        console.log("numbers:", numbers);
+            </script>
+</body>
+</html>

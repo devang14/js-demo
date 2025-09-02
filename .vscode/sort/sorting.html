@@ -7,20 +7,55 @@
 </head>
 <body>
         <script>
+
+        //    Note: if we use return, always written inside {}, we can use => directly without {}
+
                     // case 1:
                     let fruits = ["Banana","Apple","Berry","Mango"]
 
-                    console.log("correct array:",fruits.sort());
+                    console.log("correct array:",fruits.sort(), "check1");
 
-                    // case 2: capital display first and then small
+                    // case 2: uppercase display first and then small (case sensitive)
                     let fruits1 = ["Orange","mango","apple"]
                     
-                    console.log(fruits1.sort());
+                    console.log(fruits1.sort(),"Uppercase");
 
                     //case 3:
                     let fruits2 = ["orange","mango","apple"]
 
-                    console.log(fruits2.sort());
+                    console.log(fruits2.sort(), "check3");
+
+                    //case 4:
+
+                    let numbers = [20,5,3,100,40]
+
+                    console.log(numbers.sort(), "check4");
+
+                    //case 5;
+
+                    let num = [20,5,3,100,40]
+
+                    num.sort(function(a,b)
+                    {
+                         return a-b;   //assending order
+                       //  return b-a;   //decesending order
+                    });
+                    console.log(num, "check5");
+                    
+                    //case 6:
+
+                    const fruits3 = ["Banana","Kiwi","Mango","Apple","Berry"]
+
+                    fruits3.sort(function(a,b)
+                    {
+                        return a.length - b.length;   //Assending order
+
+                      //  return b.length - a.length;  //decesending order
+                    });
+                    console.log(fruits3, "check6");
+
+
+
 
 
 

@@ -9,6 +9,8 @@
             <script>
                         // if you don't have any idea about numbers of data. you will check using rest operator.
                         // rest collects the value.
+
+                            // array destructing
                             const arr1 = [1,2,3,4,5,6,7,8,9,10]
 
                             let  [a, b, ...rest] = arr1;
@@ -16,7 +18,7 @@
                             console.log(a,b, rest, "check1" );
 
 
-                          //  case2:
+                          //  case2: functions parameters
 
                           function sum(value, ...numbers)
                           {
@@ -29,7 +31,7 @@
 
                           console.log(sum(45,1,2,3,4,5,6,7,8,9,10));
                         
-
+                            
                            const array = [1,2,3,4,5]
 
                            const [, , ...rest22] = array;

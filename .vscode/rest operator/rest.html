@@ -7,12 +7,13 @@
 </head>
 <body>
             <script>
+                        // if you don't have any idea about numbers of data. you will check using rest operator.
                             
                             const arr1 = [1,2,3,4,5,6,7,8,9,10]
 
                             let  [a, b, ...rest] = arr1;
 
-                            console.log(a,b,rest, "check1");
+                            console.log(a,b, rest, "check1" );
 
 
                           //  case2:
@@ -29,7 +30,10 @@
                           console.log(sum(45,1,2,3,4,5,6,7,8,9,10));
                         
 
-                           
+                           const array = [1,2,3,4,5]
+
+                           const [, , ...rest22] = array;
+                           console.log(rest22, "check3");
 
             </script>
 </body>

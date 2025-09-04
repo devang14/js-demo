@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+                    const numbers = [1,2,3]
+                    const manymore = [4,5,6]
+
+                    // use concat method.
+                    const spreadnumbers = numbers.concat(manymore);
+                    console.log(spreadnumbers, "check1");
+
+                        // use spread method
+                    const x = [...numbers, ...manymore]
+                    console.log(x, "check2");
+
+                    // without spread method, display array
+
+                    const y = [numbers,manymore]
+                    console.log(y,"check3");
+
+                    console.log(...spreadnumbers, "check4");
+
+                    const persons = {name: "devang", age: 30};
+
+                    const updatedperson = {...persons,city:"Ahmedabad"};
+
+                    console.log(updatedperson, "check5");
+        </script>
+</body>
+</html>

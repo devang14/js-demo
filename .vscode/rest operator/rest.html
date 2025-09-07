@@ -8,35 +8,39 @@
 <body>
             <script>
 
-                            // array, object destructing
+                       // array, object destructing
 
-                           let  a, b, rest1;
-                            const arr1 = [1,2,3,4,5,6,7,8,9,10]
+                           let m, n, restArr2;
+                           const arr2 = [1,2,3,4,5,6,7,8,9,10];
 
-                             [a, b, ...rest1] = arr1;
+                           [m, n, ...restArr2] = arr2;
 
-                            console.log(a,b, rest1, "check1" );
+                           console.log(m, n, restArr2, "check1");
 
 
                           //  case2: functions parameters
 
-                          function sum(value, ...numbers)
-                          {
-                            console.log(numbers, "check2", value);
-                            return value + numbers.reduce(function(total,num) 
+                          function sum(value, value1, ...numbers)
+                       /*   {
+                            console.log(numbers, "check2", value, value1);
+                            return value + value1 + numbers.reduce(function(total,num) 
+                            
                             {
                                return  total + num;
                             },0);
                           }
-
-                          console.log(sum(45,1,2,3,4,5,6,7,8,9,10));
+                        */
+                          {
+                            console.log(numbers, "check2", value, value1);
+                           return value + value1 + numbers.reduce((total,num) => total + num, 0);
+                          }
+                          console.log(sum(46,1,2,3,4,5,6,7,8,9,10));
                         
                             
                            const array = [1,2,3,4,5]
 
                            const [, , ...rest22] = array;
-                           console.log(rest22, "check3");
-
+                           console.log(rest22, "check3");  
             </script>
 </body>
 </html>

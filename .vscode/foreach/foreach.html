@@ -27,7 +27,8 @@
         
 
 // Using arrow function method 2
-            function myfunction(value, index, array){
+            const myfunction = (value, index, array) =>
+            {
                 console.log(value, index, array);
                 sum += value;
                 htmltext += `<li>value ${value} index ${index} array ${array}</li>`;

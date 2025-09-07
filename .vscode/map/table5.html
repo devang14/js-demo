@@ -6,25 +6,28 @@
     <title>Document</title>
 </head>
         <input type="number" id = "num" placeholder="Enter a Number">
-        <button id="tables"> Table </button>
+        <button onclick="tables()"> Table </button>
+        <div id="result"></div>
+
 <body>
         <script>
                 const numbers = [1,2,3,4,5,6,7,8,9,10]
-                          
+                   
+                const tables = () =>
                     {
                         let value = document.getElementById("num").value;
                         let table ="";
-                         let tableOf = numbers.map(function 
-                         (`${value} X ${number} = ${value*number}`);
+                         let tableOf = numbers.map(number =>
+                         `${value} X ${number} = ${value*number}`);
                          console.log("table", tableOf)
-                        tableOf.forEach(function(number)
+                        tableOf.forEach(number =>
                           {
                           
-                             tavble += `number <br>`;
+                             table += `${number} <br>`;
                         
                     
                     });
-                         document.getElementById("num").innerHTML = table;
+                         document.getElementById("result").innerHTML = table;
 
   
                     };

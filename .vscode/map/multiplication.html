@@ -10,7 +10,9 @@
                     
                     const numbers = [ 20,30,40,50]
 
-                    const newArray = numbers.map(function(value,index,arr){
+                  //  const newArray = numbers.map(function(value,index,arr)
+                    const newArray = numbers.map((value, index, arr) =>    
+                    {
                         return value * 2;
                     })
                     console.log(newArray, "NewArray", numbers);

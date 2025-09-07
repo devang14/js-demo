@@ -15,8 +15,9 @@
             let sum  = 0;
           let htmltext = "<ul>";
                           //   Using forEach method 1  (find existing array)
-                numbers.forEach(function(number,index,arr){
-                    
+              //  numbers.forEach(function(number,index,arr){    //function method.
+                    numbers.forEach((number, index, arr) =>     // arrow method.
+                    {
                     console.log(number, index, arr);
                     sum += number
                     htmltext += `<li>value ${number} index ${index} array ${arr}</li>`;

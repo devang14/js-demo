@@ -16,7 +16,9 @@
                   
                 let htmltext = "<div>";
 
-                numbers.forEach(function(number){
+              //  numbers.forEach(function(number)   // method 1
+              numbers.forEach(numbers =>                //method 2  
+              {
                     htmltext += `<p> Number: ${number} </p>`;
                     console.log("Number:", number);
                 })

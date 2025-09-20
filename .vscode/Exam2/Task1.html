@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+            <button id = "final"> Result </button>
+<body>
+            <script>
+                      const numbers = [12, 45, 23, 67, 89, 34, 22, 90, 55];
+
+                      const gratherthan = numbers.filter((num) => num > 50);
+                      console.log(gratherthan, "check1");
+
+                      const sorting = gratherthan.sort((a, b) => a - b);
+                        console.log(sorting, "check2");
+                        
+
+                        const mapout = sorting.map((num) => num *2);
+                        console.log(mapout, "check3");
+
+                  const finalresult = document.getElementById("final").innerHTML;
+                      console.log(finalresult, "check4");
+                        
+            </script>
+</body>
+</html>

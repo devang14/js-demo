@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+            <button id = "Result"> Result </button>
+<body>
+        <script>
+                    const text = " JavaScript is amazing and JavaScript is powerful ";
+
+                    const spliting = text.trim();
+                    console.log(spliting, "check1");
+
+                    const text1 = text.match(/JavaScript/g || []).length;
+                    console.log(text1, "check2");
+
+                    const cleantext = text.trim();
+                    console.log(cleantext, "check3");
+
+                    const words = cleantext.split(" ");
+
+                    const wordCount = {};
+                       words.forEach(word =>{
+                         wordCount[word] = (wordCount[word] || 0) + 1;
+});
+                        let cleanText = "";
+                    const result = {
+                                    cleanText,
+                                        wordCount
+                                    };
+
+                        console.log(result);
+
+                    
+
+
+
+        </script>
+</body>
+</html>

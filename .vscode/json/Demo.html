@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+            <script>
+                //Note: undefine, function, and date object are not part of JSON
+                // store time: object to jason , get : jason to object 
+
+                const students = {
+                    name: "devang",
+                    age: 24,
+                    city: "Ahmedabad",
+                }
+                console.log(students, "normal object format");
+                console.log(JSON.stringify(students),"plain text format");
+
+                localStorage.setItem("myData", JSON.stringify(students));
+                localStorage.setItem("myData2",students);
+                localStorage.setItem("booleanvalue", true);
+                localStorage.setItem("datevalue", new Date());
+
+                const data = localStorage.getItem("myData");
+                console.log(data, "check1");
+                const data2 = localStorage.getItem("myData2");
+                console.log(data2, "check2");
+
+                
+
+                sessionStorage.setItem("myData3", JSON.stringify(students));
+                sessionStorage.setItem("myData4",students);
+
+
+                </script>
+</body>
+</html>

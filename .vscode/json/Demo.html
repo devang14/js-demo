@@ -20,10 +20,15 @@
                 console.log(JSON.stringify(students),"plain text format");
 
                 localStorage.setItem("myData", JSON.stringify(students));
+
+                                //    Key         Value
                 localStorage.setItem("myData2",students);
+
                 localStorage.setItem("booleanvalue", true);
+                
                 localStorage.setItem("datevalue", new Date());
 
+                                                // key name
                 const data = localStorage.getItem("myData");
                 console.log(data, "check1");
                 const data2 = localStorage.getItem("myData2");

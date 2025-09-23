@@ -8,12 +8,20 @@
 <body>
         <script>
                     document.cookie = "username=devang";
-                    document.cookie = "age=24";
+                    document.cookie2 = "age=24";
 
                     document.cookie = "username=devang; expires=Fri, 23 Sep 2025  23:59:59 GMT";
 
                     let x = document.cookie;
                     console.log(x);
+
+                    document.cookie = "username= raj; expires=Thu,  30 Sep 2000 00:00:00 GMT";
+                    let y = document.cookie;
+                    console.log(y);
+                //    document.cookie2 = "age=25; expires=Thu, 30 jan 2000 00:00:00 GMT"; // delete cookie
+                //    let z = document.cookie2;
+                //    console.log(z); 
+                    
         </script>
 </body>
 </html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+            <script>
+
+
+              let p = new Promise((resolve, reject) => {
+                    let a = 1 + 1;
+                   if (a == 2) {
+                        resolve("Success");
+                    } else {
+                        reject("Failed");
+                    }
+                });
+
+                p.then((message) => {
+                    console.log("This is in the then " + message);
+                }).catch((message) => {
+                    console.log("This is in the catch " + message);
+                });
+
+// Example 2
+                const myPromise = new Promise((resolve, reject) => {
+                    const Success = true;
+                    if (success){
+                        resolve("promises resolved successfully");
+                    }
+                    else
+                    {
+                        reject("promises rejected");    
+                    }
+                   });
+
+                   myPromise
+                   .then((message) => {
+                    console.log(mesaage);
+
+                   })
+                   .catch((error) => {
+                    console.log(error);
+                   });
+
+
+
+
+
+
+
+            </script>
+</body>
+</html>

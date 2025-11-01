@@ -7,19 +7,21 @@
     <style>
         .button-container {
             margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         button {
             padding: 10px 20px;
-            margin: 0 10px;        
+            margin: 0 5px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <h2> USERDATA </h2>
-    <div class="button-container">
-        <button onclick="filterData('username')">Username</button>
-        <button onclick="filterData('title')">Title</button>
-        <button onclick="filterData('completed')">Completed</button>
+    <h2>USERDATA</h2>
+    <div class="button-container" id="buttonContainer">
+        <button onclick="filterData('All')">All</button>
     </div>
     <table id="UserTable">
         <thead>
@@ -47,6 +49,8 @@
             const usermap = {};
             users.forEach(user => {
                 usermap[user.id] = user.username;
+                // Create button for each user
+                createUserButton(user.username);
             });
             
             // Store the complete data
@@ -57,6 +61,14 @@
             }));
 
             displayData(allData);
+        }
+
+        function createUserButton(username) {
+            const buttonContainer = document.getElementById('buttonContainer');
+            const button = document.createElement('button');
+            button.textContent = username;
+            button.onclick = () => filterData(username);
+            buttonContainer.appendChild(button);
         }
 
         function displayData(data) {
@@ -77,19 +89,8 @@
         function filterData(type) {
             let filteredData = [...allData];
             
-            switch(type) {
-                case 'username':
-                    filteredData = filteredData.sort((a, b) => 
-                        a.username.localeCompare(b.username));
-                    break;
-                case 'title':
-                    filteredData = filteredData.sort((a, b) => 
-                        a.title.localeCompare(b.title));
-                    break;
-                case 'completed':
-                    filteredData = filteredData.sort((a, b) => 
-                        (a.completed === b.completed) ? 0 : a.completed ? -1 : 1);
-                    break;
+            if (type !== 'All') {
+                filteredData = filteredData.filter(item => item.username === type);
             }
             
             displayData(filteredData);

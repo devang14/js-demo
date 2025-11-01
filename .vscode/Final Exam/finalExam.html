@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button-container {
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;        
+        }
+    </style>
+</head>
+<body>
+    <h2> USERDATA </h2>
+    <div class="button-container">
+        <button onclick="filterData('username')">Username</button>
+        <button onclick="filterData('title')">Title</button>
+        <button onclick="filterData('completed')">Completed</button>
+    </div>
+    <table id="UserTable">
+        <thead>
+            <tr>
+                <th>User Name</th>
+                <th>Title</th>
+                <th>Completed</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        let allData = []; // Store all data globally
+
+        async function fetchUserData() {
+            const [todosResponse, usersResponse] = await Promise.all([
+                fetch('https://jsonplaceholder.typicode.com/todos'),
+                fetch('https://jsonplaceholder.typicode.com/users')    
+            ]);
+
+            const todos = await todosResponse.json();
+            const users = await usersResponse.json();
+
+            const usermap = {};
+            users.forEach(user => {
+                usermap[user.id] = user.username;
+            });
+            
+            // Store the complete data
+            allData = todos.map(todo => ({
+                username: usermap[todo.userId],
+                title: todo.title,
+                completed: todo.completed
+            }));
+
+            displayData(allData);
+        }
+
+        function displayData(data) {
+            const tableBody = document.querySelector("#UserTable tbody");
+            tableBody.innerHTML = ''; // Clear existing data
+
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.username}</td> 
+                    <td>${item.title}</td>
+                    <td>${item.completed ? "Yes" : "No"}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        function filterData(type) {
+            let filteredData = [...allData];
+            
+            switch(type) {
+                case 'username':
+                    filteredData = filteredData.sort((a, b) => 
+                        a.username.localeCompare(b.username));
+                    break;
+                case 'title':
+                    filteredData = filteredData.sort((a, b) => 
+                        a.title.localeCompare(b.title));
+                    break;
+                case 'completed':
+                    filteredData = filteredData.sort((a, b) => 
+                        (a.completed === b.completed) ? 0 : a.completed ? -1 : 1);
+                    break;
+            }
+            
+            displayData(filteredData);
+        }
+
+        fetchUserData();
+    </script>
+</body>
+</html>
